@@ -10,7 +10,7 @@ library("RDAVIDWebService")
 #genome <- read.csv("Galgal5.0-geneIDs_parse3.txt", header = FALSE) #full chicken genome from ensembl
 genome_TS <- read.csv("mart_export_galgal_targetScan_geneID.txt", header = TRUE) #UTR gene targets from TargetScan Chicken Genome
 
-david <- DAVIDWebService(email='ralshaer@uncc.edu', url="https://david.ncifcrf.gov/webservice/services/DAVIDWebService.DAVIDWebServiceHttpSoap12Endpoint/")
+david <- DAVIDWebService(email='email@unc.edu', url="https://david.ncifcrf.gov/webservice/services/DAVIDWebService.DAVIDWebServiceHttpSoap12Endpoint/")
 BG <- addList(david, genome_TS$Gene.stable.ID, idType="ENSEMBL_GENE_ID", listName="all", listType="Background")
 
 datalist = list()
