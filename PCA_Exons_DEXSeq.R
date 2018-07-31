@@ -9,7 +9,7 @@ library(ggfortify)
 library(cluster)
 rm(list=ls())
 
-#DAVID_TEST_DEXSeqCounts_neg-posFC_padj0.1_unstr-B_rm0_filterKEGGs_1E1P #NOT NORMALIZED FILE!!!
+#File below was pre-processed from DEXSeq output to include normalized data 
 #DAVID_TEST_DEXSeqResults_neg-posFC_padj0.1_unstr-B_rmNA_1E1P_PCA_FINAL-UP.csv #FOR UPREGULATED EXONS, DW for DOWNREGULATED
 exonData <- read.csv("DAVID_TEST_DEXSeqResults_neg-posFC_padj0.1_unstr-B_rmNA_1E1P_PCA_FINAL-UP.csv", header = TRUE, fill = TRUE) #row.names = 1
 exonData = exonData[!duplicated(exonData$Exons),] #FILTER AND REMOVE DUPLICATES
