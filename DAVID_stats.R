@@ -27,7 +27,8 @@ datalist[[i]] <- FuncAnnotChart
 }
 
 big_data = do.call(rbind, datalist) #combines all previous dataframes from for loop
-pathway <- big_data[is.element(big_data$Term, c("gga04510:Focal adhesion", "gga04514:Cell adhesion molecules (CAMs)", "gga04810:Regulation of actin cytoskeleton", "gga04530:Tight junction", "gga04520:Adherens junction", "gga04540:Gap junction")),] #place specific pathway(s)
+#"gga04810:Regulation of actin cytoskeleton", "gga04530:Tight junction", "gga04520:Adherens junction", "gga04540:Gap junction"
+pathway <- big_data[is.element(big_data$Term, c("gga04510:Focal adhesion", "gga04514:Cell adhesion molecules (CAMs)")),] #place specific pathway(s)
 pathway_shh <- big_data[is.element(big_data$Term, c("gga04340:Hedgehog signaling pathway")),] #place specific pathway(s)
 hist(pathway$PValue) #histogram 
 hist(pathway_shh$PValue) #histogram 
@@ -45,7 +46,8 @@ k4 <- read.csv("Random_KEGGs_miR-3533_4.csv", header = TRUE)
 k5 <- read.csv("Random_KEGGs_miR-3533_5.csv", header = TRUE)
 
 ktotal <- rbind(k1, k2, k3, k4, k5)
-pathway_k <- ktotal[is.element(ktotal$Term, c("gga04510:Focal adhesion", "gga04514:Cell adhesion molecules (CAMs)", "gga04810:Regulation of actin cytoskeleton", "gga04530:Tight junction", "gga04520:Adherens junction", "gga04540:Gap junction")),] #place specific pathway(s)
+#"gga04810:Regulation of actin cytoskeleton", "gga04530:Tight junction", "gga04520:Adherens junction", "gga04540:Gap junction"
+pathway_k <- ktotal[is.element(ktotal$Term, c("gga04510:Focal adhesion", "gga04514:Cell adhesion molecules (CAMs)")),] #place specific pathway(s)
 hist(pathway_k$PValue, main = "Randomly Generated miRNA Gene Targets - Cell Adhesions \n800 Targets", xlab = "P-values")
 
 
