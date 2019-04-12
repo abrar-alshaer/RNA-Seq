@@ -1,3 +1,6 @@
+######This code provides the pipeline used to run an Artificial Neural Network Self Organizing Map (unsupervised neural network) 
+######as described in the paper by Al-Shaer et al. 2019 PLOS Computational Biology (link in the repository README file)
+
 setwd("C:/Users/Abrar/Dropbox/UNC_OneDrive/scripts/Smith Lab/Wei Sha Analysis/Abrar Analysis/Illumia Data/RERUN/Galgal5Run/DEXSeq PCA_Kmeans_Code+Output/")
 #Code was adapted from: https://www.r-bloggers.com/self-organising-maps-for-customer-segmentation-using-r/ 
 library("FactoMineR")
